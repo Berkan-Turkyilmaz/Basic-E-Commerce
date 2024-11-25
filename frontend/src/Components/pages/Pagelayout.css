@@ -1,0 +1,173 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}   
+body {
+    background: black;
+}
+.page-layout {
+    display: flex;
+    justify-content: center;
+}
+
+.home-left {
+    position: fixed;
+    left: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 17% ;
+    border-right: 1px solid rgb(44, 44, 44);;
+    width: 30.5%;
+    height: 100vh;
+}
+
+.sidebar-top {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    gap: 30px;
+
+}
+
+.logo-exp {
+    font-size: 20px;
+    font-weight: 400;
+}
+.sidebar-logo {
+   
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    min-width:245px ;
+    padding: 10px;
+    border-radius: 30px;
+}
+.sidebar-logo:hover {
+    cursor: pointer;
+    background-color: #181818;
+    
+}
+.sidebar-logout {
+    
+    display: flex;
+    align-items: center;
+    
+    gap: 10px;
+    min-width:245px;
+    padding-bottom: 20px;
+}
+.logout-icon{
+    cursor: pointer;
+}
+.logout-avatar {
+    height: 50px;
+    width: 50px;
+    border-radius: 30px;
+}
+.sidebar-logout-user-and-username {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.logout-user{
+    font-weight: 600;
+}
+.logout-username{
+    font-weight: 200;
+    color: gray;
+}
+.home-right{
+    position: fixed;
+    right: 0;
+    width: 32.5%;
+    height: 100vh;
+    border-left: 1px solid rgb(44, 44, 44);;
+    
+}
+.outlet{
+
+    width: 35%;
+}
+
+.home-right-left{
+    padding-top: 15px;
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+.suggested-users-box {
+    width: 90%;
+    background-color: #202327;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.suggested-users-cont{
+    background: #15171B;
+    border-radius: 20px;
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-left: 15px;
+    width: 90%;
+    height: 300px;
+}
+.who-to-follow-user-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+}
+.who-to-follow{
+    padding-left: 10px;
+    margin-bottom: 15px;
+}
+
+.who-to-follow-user-avatar {
+    height: 40px;
+    width: 40px;
+    border-radius: 45px;
+}
+.who-to-follow-user-name-and-username {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.who-to-follow-user {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    position: relative;
+    height: 50px;
+
+    
+}
+.who-to-follow-user-follow-button-container {
+    position: absolute;
+    right: 0px;
+    
+}
+.who-to-follow-user-follow-button {
+    border: none;
+    padding: 8px;
+    border-radius: 20px;
+    color: black;
+    cursor: pointer;
+}
+
+.who-to-follow-user-username{
+    color: gray;
+    font-weight: 200;
+}
+
+.who-to-follow-user-user {
+    font-weight: 600;
+}
