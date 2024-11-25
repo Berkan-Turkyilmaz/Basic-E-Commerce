@@ -1,7 +1,7 @@
 // Import React dependencies and CSS file
 import React, { useContext, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import "./LoginPage.css";
+import "./Loginpage.css";
 import toast from "react-hot-toast";
 import { MdPassword } from "react-icons/md";
 import { MdOutlineEmail } from "react-icons/md";
