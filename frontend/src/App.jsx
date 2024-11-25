@@ -4,7 +4,7 @@ import Pagelayout from "./Components/pages/Pagelayout";
 import Homepage from "./Components/pages/Homepage";
 import Profilepage from "./Components/pages/Profilepage";
 import LoginPage from "./Components/auth/login/Loginpage";
-import SignUpPage from "./Components/auth/signup/SignUpPage";
+import SignUpPage from "./Components/auth/signup/Signuppage";
 import { Toaster } from "react-hot-toast";
 
 import Notificationspage from "./Components/pages/Notificationspage";
