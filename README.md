@@ -28,6 +28,7 @@ Get Suggested Users: Nach dem Einloggen werden oben rechts bis zu 4 zufällige B
 
 Eine voll funktionsfähige Plattform im Twitter-Stil, die ein nahtloses Interagieren mit Beiträgen, Profilen und Benachrichtigungen ermöglicht.
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 📱 Twitter Clone
 
