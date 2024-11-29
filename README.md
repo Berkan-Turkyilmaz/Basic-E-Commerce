@@ -16,6 +16,8 @@ Benachrichtigungsseite: Überprüfen Sie Benachrichtigungen wie Likes, Follows u
 
 🔹 Wichtige Funktionen:
 
+Create/Delete Post: Beiträge herstellen oder löschen.
+
 Like/Unlike: Beiträge anderer Benutzer liken oder das Like zurücknehmen.
 
 Follow/Unfollow: Anderen Benutzern folgen oder ihnen nicht mehr folgen.
@@ -44,6 +46,8 @@ Profile Page: See user profiles and their posts.
 Notification Page: Check notifications like likes, follows, etc.
 
 🔹 Key Features:
+
+Create/Delete Post: Create or delete posts.
 
 Like/Unlike: Like or unlike another user's post.
 
