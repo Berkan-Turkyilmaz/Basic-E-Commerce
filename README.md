@@ -1,4 +1,4 @@
-📱 Twitter-Klon
+**📱 Twitter-Klon**
 
 Tech-Stack: MERN (MongoDB, Express.js, React, Node.js)
 
@@ -30,7 +30,7 @@ Eine voll funktionsfähige Plattform im Twitter-Stil, die ein nahtloses Interagi
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-📱 Twitter Clone
+**📱 Twitter Clone**
 
 Tech Stack: MERN (MongoDB, Express.js, React, Node.js)
 
