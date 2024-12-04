@@ -9,7 +9,7 @@ import { AuthContext } from "../../../GlobalContext";
 import { PiXLogoThin } from "react-icons/pi";
 
 const Loginpage = () => {
-  const { setAuthUser, setIsLoggedIn, isLoggedIn } = useContext(AuthContext);
+  const { setAuthUser, setIsLoggedIn, isLoggedIn, API_URL } = useContext(AuthContext);
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -25,10 +25,10 @@ const Loginpage = () => {
     setIsLoading(true);
     setIsError(false);
     setErrorMessage("");
-    console.log(formData);
+   
 
     try {
-      const res = await fetch("/api/auth/login", {
+      const res = await fetch(`${API_URL}/api/auth/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

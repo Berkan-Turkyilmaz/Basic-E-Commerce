@@ -16,7 +16,7 @@ import { AiOutlineDelete } from "react-icons/ai";
 import { Link } from "react-router-dom";
 
 export default function Homepage() {
-  const { authUser, isLoggedIn } = useContext(AuthContext);
+  const { authUser, isLoggedIn, API_URL } = useContext(AuthContext);
   const [fetchedPosts, setFetchedPosts] = useState([]);
   const [forYouOrFollowing, setForYouOrFollowing] = useState("forYou");
   const [text, setText] = useState("");
@@ -45,7 +45,7 @@ export default function Homepage() {
     if (!POST_ENDPOINT) return;
 
     try {
-      const response = await fetch(POST_ENDPOINT, {
+      const response = await fetch(`${API_URL}POST_ENDPOINT`, {
         method: "GET",
         credentials: "include",
       });
@@ -71,7 +71,7 @@ export default function Homepage() {
   const createPost = async () => {
     try {
       const responseCreate = await fetch(
-        "/api/posts/create",
+        `${API_URL}/api/posts/create`,
         {
           method: "POST",
           credentials: "include",
@@ -99,7 +99,7 @@ export default function Homepage() {
 
 const  deletePost = async (id) => {
     try {
-      const response = await fetch(`/api/posts/${id}`, {
+      const response = await fetch(`${API_URL}/api/posts/${id}`, {
         method: "DELETE",
         credentials: "include",
       });
@@ -119,7 +119,7 @@ const  deletePost = async (id) => {
   const likePost = async (id) => {
     try {
       const res = await fetch(
-        `/api/posts/likes/${id}`,
+        `${API_URL}/api/posts/likes/${id}`,
         {
           method: "POST",
           credentials: "include",

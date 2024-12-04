@@ -6,11 +6,13 @@ import { AiOutlineDelete } from "react-icons/ai";
 import { toast } from "react-hot-toast";
 
 export default function Notificationspage() {
+  const { API_URL } = useContext(AuthContext);
+
   const [fetchedNotifications, setFetchedNotifications] = useState([]);
 
   const getNotifications = async () => {
     try {
-      const res = await fetch("/api/notifications", {
+      const res = await fetch(`${API_URL}/api/notifications`, {
         method: "GET",
         credentials: "include",
       });
@@ -33,7 +35,7 @@ export default function Notificationspage() {
 
   const deleteNotification = async () => {
     try {
-      const res = await fetch("/api/notifications/", {
+      const res = await fetch(`${API_URL}/api/notifications/`, {
         method: "DELETE",
         credentials: "include",
       });

@@ -15,7 +15,7 @@ import followUnfollow from "../../Components/other/followUnfollow";
 
 
 export default function Profilepage() {
-  const { authUser } = useContext(AuthContext);
+  const { authUser, API_URL } = useContext(AuthContext);
   const { username } = useParams();
   const [fetchedProfileInfos, setFetchedProfileInfos] = useState(null);
   const [fetchedUserPosts, setFetchedUserPosts] = useState(null);
@@ -25,7 +25,7 @@ export default function Profilepage() {
     const fetchProfile = async (username) => {
     try {
       const res = await fetch(
-        `/api/users/profile/${username}`,
+        `${API_URL}/api/users/profile/${username}`,
         {
           method: "GET",
           credentials: "include",
@@ -56,7 +56,7 @@ export default function Profilepage() {
   const fetchUserPosts = async (id) => {
     try {
       if (!id) return;
-      const res = await fetch(`/api/posts/${id}`, {
+      const res = await fetch(`${API_URL}/api/posts/${id}`, {
         method: "GET",
         credentials: "include",
       });
@@ -76,7 +76,7 @@ export default function Profilepage() {
 
   const deletePost = async (id) => {
     try {
-      const response = await fetch(`/api/posts/${id}`, {
+      const response = await fetch(`${API_URL}/api/posts/${id}`, {
         method: "DELETE",
         credentials: "include",
       });
@@ -95,7 +95,7 @@ export default function Profilepage() {
 
   const likePost = async (id) => {
     try {
-      const res = await fetch(`/api/posts/likes/${id}`, {
+      const res = await fetch(`${API_URL}/api/posts/likes/${id}`, {
         method: "POST",
         credentials: "include",
       });

@@ -1,13 +1,16 @@
 // Import React dependencies and CSS file
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Signuppage.css";
 import toast from "react-hot-toast";
 import { CiUser } from "react-icons/ci";
 import {  MdPassword, MdDriveFileRenameOutline, MdOutlineEmail } from "react-icons/md";
 import { PiXLogoThin } from "react-icons/pi";
+import { AuthContext } from "../../../GlobalContext";
 
 const Signuppage = () => {
+  const { API_URL } = useContext(AuthContext);
+
 	const [formData, setFormData] = useState({
 		email: "",
 		username: "",
@@ -26,7 +29,8 @@ const Signuppage = () => {
         setErrorMessage("");
 
         try {
-            const res = await fetch("/api/auth/signup", {
+          console.log(formData)
+            const res = await fetch(`${API_URL}/api/auth/signup`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -43,6 +47,7 @@ const Signuppage = () => {
             console.log("Signup Successful")
             navigate("/login");
         } catch (error) {
+          
             setErrorMessage(error.message);
             setIsError(true);
         } finally {

@@ -12,12 +12,13 @@
   import followUnfollow from "../../Components/other/followUnfollow";
 
   export default function Pagelayout() {
+    
     const navigate = useNavigate();
     const [isLoading, setIsLoading] = useState(false);
     const [isError, setIsError] = useState(false);
     const [errorMessage, setErrorMessage] = useState("");
     const [suggestedUsers, setSuggestedUsers] = useState([]);
-    const { authUser, setAuthUser, setIsLoggedIn } = useContext(AuthContext);
+    const { authUser, setAuthUser, setIsLoggedIn, API_URL } = useContext(AuthContext);
     
     const handleLogout = async (e) => {
       e.preventDefault();
@@ -26,7 +27,7 @@
       setErrorMessage("");
 
       try {
-        const res = await fetch("/api/auth/logout", {
+        const res = await fetch(`${API_URL}/api/auth/logout`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -51,7 +52,7 @@
 
     const fetchSuggestedUsers = async () => {
       try {
-        const response = await fetch("/api/users/suggested", {
+        const response = await fetch(`${API_URL}/api/users/suggested`, {
           method: "GET", credentials: "include",
         });
         const data = await response.json();
