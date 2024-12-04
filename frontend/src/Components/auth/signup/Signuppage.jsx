@@ -103,10 +103,10 @@ const Signuppage = () => {
               <input
                 className="signup-input"
                 type="text"
-                placeholder="Name"
+                placeholder="Full Name"
                 onChange={handleInputChange}
                 value={formData.name}
-                name="name"
+                name="fullName"
               />
             </div>
             <div className="input-icon-cont">
