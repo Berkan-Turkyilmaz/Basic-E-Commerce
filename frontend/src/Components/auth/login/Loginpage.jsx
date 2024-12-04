@@ -63,7 +63,7 @@ const Loginpage = () => {
     <>
       <div className="login-container">
         <div className="login-left-cont">
-          <div className="image-x">
+          <div className="image-x ">
             <PiXLogoThin size={500} />
           </div>
         </div>

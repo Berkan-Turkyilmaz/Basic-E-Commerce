@@ -23,6 +23,7 @@ body {
   align-items: center;
   width: 70%;
   height: 70%;
+  
 }
 .sign-in-with-logo {
   margin-left: 50px;
@@ -112,3 +113,4 @@ gap: 10px;
 .switch-button:hover {
   background-color: #27353e;
 }
+
